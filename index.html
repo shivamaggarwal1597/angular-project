@@ -1,0 +1,39 @@
+<!doctype html>
+ <html lang="en">
+  <head>
+    <title>Lunch Checker</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     
+      <style>
+       .message { font-size: 1.3em; font-weight: bold; }
+     </style>
+   </head>
+ <body ng-app="myApp">
+    <div class="container" ng-controller="dishController">
+      <h1>Lunch Checker</h1>
+ 
+          <div class="form-group">
+              <input id="lunch-menu" type="text"
+              placeholder="list comma separated dishes you usually have for lunch"
+              class="form-control" ng-model="dishes">
+              //this is the input tag and we have binded the dishes with its value using ng-model
+          </div>
+          <div class="form-group">
+            <button class="btn btn-default" ng-click="check()">Check If Too Much</button>
+              // instead of using onclick() operation ...I have used ng-click to make an event listener
+              //and call the function check()
+          </div>
+          
+          <div class="form-group message" >
+            <!-- Your message can go here. -->
+            {{message}}
+            //this is the place where the message is displayed after checking
+            
+          </div>
+    </div>
+//the script files are included here
+ <script src="angular.js"></script>
+ <script src="app.js"></script>
+ </body>
+ </html
